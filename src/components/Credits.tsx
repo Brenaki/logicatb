@@ -9,7 +9,7 @@ export const Credits = ({title}:CreditsProps) => {
     return(
         <section className='flexCenter flex-col mt-5 gap-y-2'>
             <h2 className='font-bold text-xl text-center'>{title}</h2>
-            <div className='flex flex-col border-4 p-10 px-20 border-black gap-y-4'>  
+            <div className='flex flex-col rounded-md border-4 p-10 px-20 border-black gap-y-4'>  
                 {person.map((valor,index)=>(
                     <Itens description={valor.description} name={valor.name} image={valor.image} key={index} />
                 ))}
