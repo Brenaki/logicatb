@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { Credits } from "@/components/Credits";
 import { Explanation } from "@/components/Explanation";
-import { nomes, text1, text2, text3 } from "@/constants";
+import { text1, text2, text3 } from "@/constants";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Explanation text={text1} title="INFERÊNCIA PROPOSICIONAL COM RACIOCÍNIO PARA FRENTE E PARA TRÁS DE PRIMEIRA ORDEM " />
       <Explanation text={text2} title="UNIFICAÇÃO EM LOGICA DE PRIMEIRA ORDEM" />
       <Explanation text={text3} title="FORMA NORMAL PRENEX"/>
-      <Credits name={nomes} title={"desenvolvedores"}/>
+      <Credits  title="desenvolvedores"/>
     </section>
   );
 }

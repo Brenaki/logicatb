@@ -1,33 +1,40 @@
+import { person } from "@/constants";
 import Image from "next/image";
+
 interface CreditsProps{
-    name: string[];
-    title: String;
-}
-interface ItensProps{
-    key: number;
-    name: string;
+    title: string;
 }
 
-export const Credits: React.FC<CreditsProps> = ({name,title}) => {
+export const Credits = ({title}:CreditsProps) => {
     return(
         <section className='flexCenter flex-col mt-5 gap-y-2'>
-            <h2 className='font-bold text-xl max-w-2xl text-center'>{title}</h2>
-            <div className='flex flex-col border-4 p-4 border-black gap-y-4'>
-            {name.map((nome,index)=>(
-                <div className="flex gap-x-4 max-h-40"><Itens key={index} name={nome} />
-                <p key={index} className='max-w-4xl items-start text-justify'> {nome}</p></div>
-            ))}
+            <h2 className='font-bold text-xl text-center'>{title}</h2>
+            <div className='flex flex-col border-4 p-10 px-20 border-black gap-y-4'>  
+                {person.map((valor,index)=>(
+                    <Itens description={valor.description} name={valor.name} image={valor.image} key={index} />
+                ))}
             </div>
         </section>
-
     );
 };
 
 
-function Itens({key,name}:ItensProps){
+interface ItensProps{
+    name: string;
+    description: string;
+    image: string;
+    key: number;
+}
+
+
+function Itens({name,description,image,key}:ItensProps){
     return(
-        <div key={key}>
-            <Image width={150} height={100} src={`/${name}.jpg`} alt="gato"/>
+        <div key={key} className="flex gap-x-4 max-h-40">
+            <Image width={150} height={100} src={`/${image}.jpg`} alt="gato"/>
+        <div className="flex flex-col items-start ">
+            <p className='items-start text-justify font-bold'> {name}</p>
+            <p className="capitalize">{description}</p>
+        </div>
         </div>
     )
 }

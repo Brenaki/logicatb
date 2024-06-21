@@ -27,6 +27,46 @@ export const text3: string[] = ["Na lógica de predicados, a forma normal prenex
   "1. Remover implicação: ¬( ∃x.P(x) → ∀y.Q(x,y)) ∨ ∀z.R(z)",
   "2. Aplicar negação: ( ∃x.¬P(x) ∨ ∀y.¬Q(x,y)) ∨ ∀z.R(z)",
   "3. Converter para a forma prenexa: ∃x ∀z. (¬P(x) ∨ ¬∀y.Q(x,y) ∨ R(z))"];
-export const text4: string[] = [];
+export const text4: string[] = ["PREMISSAS:",
+  "1. ∀x (P(x) → Q(x))",
+  "2. ∀x (Q(x) → R(x))",
+  "3. P(a)",
+  "Objetivo: Provar R(a)",
+  "Passos:",
+  "1. Primeiro passo:",
+  "  • Premissas: P(a) e ∀(x) (P(x) → Q(x))",
+  "  • Aplicação de Modus Ponens: De P(a) e P(a) → Q(a), inferimos Q(a).",
+  "1. Segundo passo:",
+  "  • Novas premissas: Q(a) e ∀(x) ((Q(x)→R(x))",
+  "  • Aplicação de Modus Ponens: De Q(a) e Q(a) → R(a), inferimos R(a).",
+  "Portanto, usando raciocínio para frente, inferimos que R(a) é verdadeiro a partir das premissas."
+];
+export const text5: string[] = [
+    "PREMISSAS:",
+    "1. ∀x (P(x) → Q(x))",
+    "2. ∀x (Q(x) → R(x))",
+    "3. P(a)",
+    "Objetivo: Provar R(a)",
+    "Passos:",
+    "1. Primeiro passo:",
+    "  • Objetivo: Provar R(a).",
+    "  • Para provar R(a), precisamos provar Q(a), pois temos ∀x (Q(x) → R(x)).",
+    "2. Segundo passo:",
+    "  • Novo objetivo: Provar Q(a).",
+    "  • Para provar Q(a), precisamos provar P(a), pois temos ∀x (P(x) → Q(x)).",
+    "3. Terceiro passo:",
+    "  • Novo objetivo: Provar P(a).",
+    "  • P(a) é uma premissa dada, então P(a) é verdadeiro.",
+    "4. Quarto passo:",
+    "  • Como P(a) é verdadeiro e temos ∀x (P(x) → Q(x)), inferimos Q(a).",
+    "5. Quinto passo:",
+    "  • Como Q(a) é verdadeiro e temos ∀x (Q(x) → R(x)), inferimos R(a).",
+    "Portanto, usando raciocínio para trás, inferimos que R(a) é verdadeiro a partir das premissas."
+  ];
 
-export const nomes: string[] = ["jonas","victor","simao","joaor"];
+export const person = [
+    { name: "João Pedro Borsato de Ramos", description: "Responsável pelo desenvolvimento do site e suporte", image: "jonas" },
+    { name: "Victor Angelo Legat Cerqueira", description: "Responsável pelo desenvolvimento do site", image: "victor" },
+    { name: "João Pedro Chaves Simão", description: "Responsável pela pesquisa dos conteúdos e marketing.", image: "simao" },
+    { name: "João Rafael dos Santos da Rosa", description: "Responsável pelo UX/UI site", image: "joaor" }
+  ];
