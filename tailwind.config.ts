@@ -70,6 +70,9 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'bg-img-1': "url('/fundos.png')",
+      },
       screens: {
         xs: '400px',
         '3xl': '1680px',
