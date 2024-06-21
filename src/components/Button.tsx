@@ -1,13 +1,17 @@
 interface ButtonProps {
   text: string;
+  icon?: string;
 }
 
-export function Button({ text }: ButtonProps) {
+export function Button({ text, icon }: ButtonProps) {
   return (
     <button
-      className="flexCenter bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      className="flexCenter hover:bg-gray-10 py-2 px-4 rounded"
       type="button">
       {text}
+      <span className="ml-2">
+        {icon}
+      </span>
     </button>
   );
 }
