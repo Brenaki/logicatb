@@ -19,7 +19,7 @@ export function Navbar() {
         <li>
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
-              Conteudos ▼
+              Conteúdos ▼
             </DropdownMenu.Trigger>
             <DropdownMenu.Content className="p-2 rounded-md shadow-xl">
               <DropdownMenu.Item className="p-2 hover:bg-gray-10"><Link href={conteudos[0].href}>{conteudos[0].title}</Link></DropdownMenu.Item>
@@ -29,7 +29,7 @@ export function Navbar() {
           </DropdownMenu.Root>
         </li>
         <li>
-          <Link href="/developers"><Button text="Desenvolvimento" /></Link>
+          <Link href="/developers"><Button text="Sobre" /></Link>
         </li>
       </ul>
     </nav>
