@@ -1,13 +1,16 @@
 import { Button } from "@/components/Button";
+import { Credits } from "@/components/Credits";
+import { Explanation } from "@/components/Explanation";
+import { nomes, text1, text2, text3 } from "@/constants";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="2xl:max-container relative flexCenter min-h-screen">
-      <div className="flexCenter flex-col">
-        <h1>Hello World</h1>
-        <Button text="Clique aqui" />
-      </div>
+    <section className="2xl:max-container relative flexCenter min-h-screen flex-col gap-y-40">
+      <Explanation text={text1} title="INFERÊNCIA PROPOSICIONAL COM RACIOCÍNIO PARA FRENTE E PARA TRÁS DE PRIMEIRA ORDEM " />
+      <Explanation text={text2} title="UNIFICAÇÃO EM LOGICA DE PRIMEIRA ORDEM" />
+      <Explanation text={text3} title="FORMA NORMAL PRENEX"/>
+      <Credits name={nomes} title={"desenvolvedores"}/>
     </section>
   );
 }
