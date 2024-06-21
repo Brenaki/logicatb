@@ -70,3 +70,9 @@ export const person = [
     { name: "João Pedro Chaves Simão", description: "Responsável pela pesquisa dos conteúdos e marketing.", image: "simao" },
     { name: "João Rafael dos Santos da Rosa", description: "Responsável pelo UX/UI site", image: "joaor" }
   ];
+
+export const conteudos = [
+  { title: "Inferência F/T", href: "/inference" },
+  { title: "Unificação em lógica de primeira ordem", href: "/first-order" },
+  { title: "Forma normal prenex", href: "/prenex" },
+]
